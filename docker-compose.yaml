@@ -1,7 +1,17 @@
 services:
   ffmpeg-service:
+    build: .
+    # 构建完成后可以使用以下镜像替代 build:
+    # image: ghcr.io/ukck/ffmpeg-service:latest
     container_name: ffmpeg-service
     hostname: ffmpeg-service
     restart: unless-stopped
     ports:
       - "9200:8000"
+    environment:
+      - TMP_DIR=/tmp/ffmpeg_api
+    volumes:
+      - ffmpeg_tmp:/tmp/ffmpeg_api
+
+volumes:
+  ffmpeg_tmp:
