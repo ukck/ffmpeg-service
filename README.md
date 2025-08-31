@@ -177,7 +177,8 @@ graph TB
     Stream --> Client
     
     subgraph "存储层"
-        TempStore --> TmpDir[/tmp/ffmpeg_api]
+        TmpDir["/tmp/ffmpeg_api"]
+        TempStore --> TmpDir
     end
     
     subgraph "配置"
@@ -312,7 +313,6 @@ MIT License
 
 - 提交 [Issue](../../issues)
 - 发送邮件到项目维护者
-- 查看[常见问题](#故障排除)部分
 
 ---
 
