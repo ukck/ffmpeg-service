@@ -1,0 +1,7 @@
+services:
+  ffmpeg-service:
+    container_name: ffmpeg-service
+    hostname: ffmpeg-service
+    restart: unless-stopped
+    ports:
+      - "9200:8000"
