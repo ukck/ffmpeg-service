@@ -1,5 +1,3 @@
-
-
 services:
   ffmpeg-service:
     container_name: ffmpeg-service
